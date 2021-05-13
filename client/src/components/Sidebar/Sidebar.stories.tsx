@@ -8,6 +8,7 @@ import { PageExplorerMenuItemDefinition } from './menu/PageExplorerMenuItem';
 import { LinkMenuItemDefinition } from './menu/LinkMenuItem';
 import { SubMenuItemDefinition } from './menu/SubMenuItem';
 import { initFocusOutline } from '../../utils/focus';
+import SVGIconSprite from '../SVGIconSprite';
 
 import '../../../../wagtail/admin/static/wagtailadmin/css/sidebar.css';
 import { CustomBrandingModuleDefinition } from './modules/CustomBranding';
@@ -216,6 +217,7 @@ function renderSidebarStory(modules: ModuleDefinition[]) {
 
   return (
     <div className="wrapper">
+      <SVGIconSprite />
       <Sidebar modules={modules} currentPath={currentPath} navigate={navigate} onExpandCollapse={onExpandCollapse} />
       <main id="main" className="content-wrapper" role="main">
         <div className="content">
